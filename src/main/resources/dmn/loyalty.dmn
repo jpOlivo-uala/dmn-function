@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="loyalty" name="Loyalty Definitions" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.9.0">
+  <decision id="voucher" name="Voucher Decision" camunda:versionTag="0.0.1">
+    <decisionTable id="DecisionTable_041rjxh">
+      <input id="Input_1" label="Day of week" biodi:width="192">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>dayWeek</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0lonmr0" label="ISO Id">
+        <inputExpression id="LiteralExpression_1g92qq5" typeRef="integer">
+          <text>isoId</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_10wkqdr" label="ISO Description" biodi:width="192" camunda:inputVariable="isoDescription">
+        <inputExpression id="LiteralExpression_09v1zx1" typeRef="string" expressionLanguage="feel">
+          <text>isoDescription</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="Voucher Key" name="voucherKey" typeRef="string">
+        <outputValues id="UnaryTests_12y9ne0">
+          <text>"test"</text>
+        </outputValues>
+      </output>
+      <rule id="DecisionRule_1t6ebnw">
+        <inputEntry id="UnaryTests_0dylm4l">
+          <text>"MONDAY"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_06bwmol">
+          <text>[47541917..47541920]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_07dr1aw">
+          <text>ends with(isoDescription, "*")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0yf0mtu">
+          <text>"PedidosYa_50_off"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1f4vipd">
+        <inputEntry id="UnaryTests_0edt1wc">
+          <text>"TUESDAY"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1ghty82">
+          <text>[47541917..47541920]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02mqdoz">
+          <text>ends with(isoDescription, "*")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_19dfdez">
+          <text>"PedidosYa_40_off"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0dvv024">
+        <inputEntry id="UnaryTests_0dmsala">
+          <text>"WEDNESDAY"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wba13l">
+          <text>[47541917..47541920]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1nft2o1">
+          <text>ends with(isoDescription, "*")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0wyxhrw">
+          <text>"PedidosYa_30_off"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_19ow7ao">
+        <inputEntry id="UnaryTests_15oxsek">
+          <text>not("MONDAY","TUESDAY","WEDNESDAY")</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01l0gzd">
+          <text>[47541917..47541920]</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17jy3r6">
+          <text>ends with(isoDescription, "*")</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0o6aso3">
+          <text>"PedidosYa_20_off"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="voucher">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

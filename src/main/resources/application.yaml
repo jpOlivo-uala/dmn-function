@@ -1,0 +1,9 @@
+logging:
+  level:
+    org.camunda.bpm: debug
+
+    
+spring:
+  cloud:
+    function:
+      scan.packages: com.demo.function    
