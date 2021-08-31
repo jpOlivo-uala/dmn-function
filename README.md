@@ -4,7 +4,7 @@ The business decisions can be modeled with DMN and these can be expose through a
 
 ### Starting the function
 
-```bash
+```sh
 ❯ ./mvnw spring-boot:run
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
