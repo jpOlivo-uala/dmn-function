@@ -14,7 +14,7 @@ The business decisions can be modeled with DMN and these can be expose through a
  =========|_|==============|___/=/_/_/_/
  :: Spring Boot ::                (v2.5.4)
 
-2021-08-31 14:51:07.996  INFO 73769 --- [           main] com.demo.function.FunctionApplication    : Starting FunctionApplication using Java 11.0.11 on WKSAR150L.local with PID 73769 (/Users/juanolivera/Dev/uala/dmn-function/target/classes started by juanolivera in /Users/juanolivera/Dev/uala/dmn-function)
+2021-08-31 14:51:07.996  INFO 73769 --- [           main] com.demo.function.FunctionApplication    : Starting FunctionApplication using Java 11.0.11 on hostname.local with PID 73769 (/Users/guest/Dev/uala/dmn-function/target/classes started by guest in /Users/guest/Dev/uala/dmn-function)
 ...
 2021-08-31 14:51:09.356  INFO 73769 --- [           main] o.s.c.f.web.mvc.FunctionHandlerMapping   : FunctionCatalog: org.springframework.cloud.function.context.catalog.BeanFactoryAwareFunctionRegistry@1f15e689
 ...
